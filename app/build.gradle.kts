@@ -25,6 +25,7 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+        buildConfigField("String", "API_KEY", "${project.findProperty("API_KEY")}")
     }
 
     buildTypes {
@@ -88,8 +89,16 @@ dependencies {
     ksp(libs.hilt.compiler)
     implementation(libs.androidx.hilt.navigation.compose)
 
-    implementation("com.google.android.play:core:1.10.3")
-    implementation(libs.core.ktx)
+//    implementation("com.google.android.play:core:1.10.3")
+//    -Principal.WebIdentityProviders.Google Play Feature Delivery
+// https://mvnrepository.com/artifact/com.google.android.play/feature-delivery
+    implementation("com.google.android.play:feature-delivery:2.1.0")
+
+//    -Principal.WebIdentityProviders.Google Play Asset Delivery
+// https://mvnrepository.com/artifact/com.google.android.play/asset-delivery
+//    implementation("com.google.android.play:asset-delivery:2.3.0")
+
+//    implementation(libs.core.ktx)
 
     // Coroutines
     implementation(libs.kotlinx.coroutines.core)

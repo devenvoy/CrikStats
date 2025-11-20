@@ -34,12 +34,13 @@ fun PlayerStatsContent(
 ) {
     Column(
         modifier = modifier
-            .padding(16.dp)
+            .padding(horizontal = 16.dp)
             .fillMaxWidth()
             .verticalScroll(rememberScrollState()),
         verticalArrangement = Arrangement.spacedBy(24.dp),
     ) {
         // Player Info Card
+        Spacer(modifier = Modifier.height(16.dp))
         PlayerInfoCard(stats)
 
         // Player Details
@@ -47,6 +48,7 @@ fun PlayerStatsContent(
 
         // Stats grouped by function and match type
         stats.stats?.let { StatsSection(it) }
+        Spacer(modifier = Modifier.height(16.dp))
     }
 }
 

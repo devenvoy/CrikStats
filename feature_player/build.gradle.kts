@@ -1,3 +1,5 @@
+import groovy.xml.Entity.Dagger
+
 plugins {
     alias(libs.plugins.android.dynamic.feature)
     alias(libs.plugins.kotlin.android)
@@ -52,13 +54,12 @@ dependencies {
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.compose.material.icons.extended)
 
-    implementation("com.google.android.play:core:1.10.3")
     implementation(libs.core.ktx)
 
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.androidx.lifecycle.runtime.compose)
 
-    // Dagger Hilt
+//     Dagger Hilt
 //    implementation(libs.hilt.android)
 //    ksp(libs.hilt.compiler)
     implementation("com.google.dagger:dagger:2.57.2")

@@ -98,8 +98,11 @@ fun HomeScreenDemo(
             }
 
             installState?.let {
+
                 InstallProgressCard(it)
+
                 Spacer(modifier = Modifier.height(8.dp))
+
                 AnimatedVisibility(it is InstallState.Installed) {
                     Column(
                         modifier = Modifier.fillMaxWidth(),

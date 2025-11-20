@@ -1,5 +1,6 @@
 package com.devansh.crikstats.data.api
 
+import com.devansh.crikstats.BuildConfig
 import com.devansh.crikstats.data.model.PlayerStatsResponse
 import com.devansh.crikstats.data.model.PlayerSummary
 import com.devansh.crikstats.data.model.PlayersApiResponse
@@ -23,6 +24,6 @@ interface CricketApiService {
 
     companion object {
         const val BASE_URL = "https://api.cricapi.com/"
-        const val API_KEY="201c4729-4e39-473d-8f22-383d7346d55f"
+        const val API_KEY = BuildConfig.API_KEY
     }
 }

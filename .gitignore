@@ -17,3 +17,6 @@ local.properties
 *.jks
 .idea
 app/release/*
+feature_player/build/*
+.kotlin
+app/build/*

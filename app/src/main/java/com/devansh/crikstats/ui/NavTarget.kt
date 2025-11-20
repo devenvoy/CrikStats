@@ -1,4 +1,4 @@
-package com.devansh.crikstats.ui.screens
+package com.devansh.crikstats.ui
 
 import kotlinx.serialization.Serializable
 
