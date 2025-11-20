@@ -15,6 +15,6 @@ class CrikStatsApplication : Application() {
     
     override fun onCreate() {
         super.onCreate()
-        SplitCompat.install(this)
+//        SplitCompat.install(this)
     }
 }

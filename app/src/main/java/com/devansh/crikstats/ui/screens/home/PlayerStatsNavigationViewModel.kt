@@ -4,7 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.devansh.core.utils.InstallState
+import com.devansh.crikstats.utils.InstallState
 import com.devansh.crikstats.utils.DynamicFeatureManager
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -54,11 +54,26 @@ class PlayerStatsNavigationViewModel @Inject constructor(
                 putExtra("PLAYER_ID", playerId)
             }
             activity.startActivity(intent)
-            clearInstallState()
         } catch (e: Exception) {
             _installState.update { InstallState.Failed(-1, e.message) }
         }
     }
+
+    fun installModule() {
+        viewModelScope.launch {
+            clearInstallState()
+            featureManager.installModule(DynamicFeatureManager.FEATURE_PLAYER_MODULE)
+                .collect { state ->
+                    _installState.update { state }
+                }
+        }
+    }
+
+    fun uninstallModule() {
+        featureManager.uninstallModule(DynamicFeatureManager.FEATURE_PLAYER_MODULE)
+        clearInstallState()
+    }
+
 
     fun clearInstallState() {
         _installState.update { null }

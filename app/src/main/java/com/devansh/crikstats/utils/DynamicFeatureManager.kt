@@ -4,15 +4,16 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.widget.Toast
-import com.devansh.core.utils.InstallState
 import com.google.android.play.core.splitinstall.SplitInstallManager
 import com.google.android.play.core.splitinstall.SplitInstallManagerFactory
 import com.google.android.play.core.splitinstall.SplitInstallRequest
 import com.google.android.play.core.splitinstall.SplitInstallStateUpdatedListener
 import com.google.android.play.core.splitinstall.model.SplitInstallSessionStatus
 import kotlinx.coroutines.channels.awaitClose
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -56,7 +57,10 @@ class DynamicFeatureManager @Inject constructor(
                         val progress = if (state.totalBytesToDownload() > 0) {
                             (state.bytesDownloaded() * 100 / state.totalBytesToDownload()).toInt()
                         } else 0
-                        trySend(InstallState.Downloading(progress))
+                        launch {
+                            delay(200)
+                            trySend(InstallState.Downloading(progress))
+                        }
                     }
 
                     SplitInstallSessionStatus.INSTALLING -> {

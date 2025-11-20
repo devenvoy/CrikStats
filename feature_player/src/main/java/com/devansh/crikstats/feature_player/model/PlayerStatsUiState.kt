@@ -1,7 +1,7 @@
 
 package com.devansh.crikstats.feature_player.model
 
-import com.devansh.core.data.model.PlayerStatsResponse
+import com.devansh.crikstats.data.model.PlayerStatsResponse
 
 data class PlayerStatsUiState(
     val isLoading: Boolean = false,

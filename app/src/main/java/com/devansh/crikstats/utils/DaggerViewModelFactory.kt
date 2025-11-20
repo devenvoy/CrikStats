@@ -1,4 +1,4 @@
-package com.devansh.core.utils
+package com.devansh.crikstats.utils
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

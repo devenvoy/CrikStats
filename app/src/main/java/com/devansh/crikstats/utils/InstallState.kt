@@ -1,4 +1,4 @@
-package com.devansh.core.utils
+package com.devansh.crikstats.utils
 
 sealed class InstallState {
     object Pending : InstallState()

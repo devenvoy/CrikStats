@@ -13,3 +13,7 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+*.jks
+.idea
+app/release/*

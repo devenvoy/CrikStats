@@ -1,10 +1,8 @@
 package com.devansh.crikstats.feature_player.ui.screens
 
-import android.util.Log.e
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import coil.util.CoilUtils.result
-import com.devansh.core.data.repository.CricketRepository
+import com.devansh.crikstats.data.repository.CricketRepository
 import com.devansh.crikstats.feature_player.model.PlayerStatsUiState
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedFactory

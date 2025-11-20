@@ -1,9 +1,9 @@
-package com.devansh.core.data.repository
+package com.devansh.crikstats.data.repository
 
-import com.devansh.core.data.api.CricketApiService
-import com.devansh.core.data.model.PlayerStatsResponse
-import com.devansh.core.data.model.PlayerSummary
-import com.devansh.core.utils.exceptions.RepositoryException
+import com.devansh.crikstats.data.api.CricketApiService
+import com.devansh.crikstats.data.model.PlayerStatsResponse
+import com.devansh.crikstats.data.model.PlayerSummary
+import com.devansh.crikstats.utils.exceptions.RepositoryException
 import javax.inject.Inject
 
 interface CricketRepository {

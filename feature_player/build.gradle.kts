@@ -41,7 +41,6 @@ android {
 dependencies {
 
     implementation(project(":app"))
-    implementation(project(":core"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -59,16 +58,11 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.androidx.lifecycle.runtime.compose)
 
-    // Navigation
-    implementation(libs.androidx.navigation.compose)
-    implementation(libs.androidx.navigation.fragment.ktx)
-    implementation(libs.androidx.navigation.ui.ktx)
-
     // Dagger Hilt
 //    implementation(libs.hilt.android)
 //    ksp(libs.hilt.compiler)
-    implementation("com.google.dagger:dagger:2.57.1")
-    ksp("com.google.dagger:dagger-compiler:2.57.1")
+    implementation("com.google.dagger:dagger:2.57.2")
+    ksp("com.google.dagger:dagger-compiler:2.57.2")
 
     // Coroutines
     implementation(libs.kotlinx.coroutines.core)

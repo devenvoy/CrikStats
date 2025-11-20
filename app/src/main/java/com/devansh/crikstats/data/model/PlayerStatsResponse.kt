@@ -1,4 +1,4 @@
-package com.devansh.core.data.model
+package com.devansh.crikstats.data.model
 
 data class PlayerStatsResponse(
     val id: String,
@@ -9,5 +9,6 @@ data class PlayerStatsResponse(
     val bowlingStyle: String?=null,
     val dateOfBirth: String?=null,
     val placeOfBirth: String?=null,
-    val playerImg: String? = null
+    val playerImg: String? = null,
+    val stats: List<PlayerInfoStats>? = null
 )

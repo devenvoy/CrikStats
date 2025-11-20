@@ -1,4 +1,4 @@
-package com.devansh.core.data.model
+package com.devansh.crikstats.data.model
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

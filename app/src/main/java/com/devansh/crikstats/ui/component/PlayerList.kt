@@ -8,8 +8,8 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.devansh.core.data.model.PlayerSummary
-import com.devansh.core.utils.InstallState
+import com.devansh.crikstats.data.model.PlayerSummary
+import com.devansh.crikstats.utils.InstallState
 
 @Composable
 fun PlayerList(

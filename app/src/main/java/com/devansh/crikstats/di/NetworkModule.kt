@@ -1,6 +1,6 @@
 package com.devansh.crikstats.di
 
-import com.devansh.core.data.api.CricketApiService
+import com.devansh.crikstats.data.api.CricketApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

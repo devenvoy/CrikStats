@@ -15,12 +15,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.devansh.core.utils.InstallState
+import com.devansh.crikstats.utils.InstallState
 
 @Composable
 fun InstallProgressCard(installState: InstallState) {
     Card(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier.fillMaxWidth().padding(20.dp),
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.primaryContainer
         )
@@ -56,6 +56,13 @@ fun InstallProgressCard(installState: InstallState) {
                     )
                     Spacer(modifier = Modifier.height(8.dp))
                     CircularProgressIndicator()
+                }
+
+                is InstallState.Installed -> {
+                    Text(
+                        text = "Module installed successfully!",
+                        style = MaterialTheme.typography.bodyLarge
+                    )
                 }
 
                 else -> {}

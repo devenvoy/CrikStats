@@ -2,12 +2,14 @@ package com.devansh.crikstats.ui.screens.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.devansh.core.data.model.PlayerSummary
-import com.devansh.core.data.repository.CricketRepository
+import com.devansh.crikstats.data.model.PlayerSummary
+import com.devansh.crikstats.data.repository.CricketRepository
+import com.devansh.crikstats.utils.StaticPlayerData
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -25,7 +27,7 @@ class HomeViewModel @Inject constructor(
     val uiState: StateFlow<MainUiState> = _uiState.asStateFlow()
 
     init {
-        loadPlayers()
+        loadStaticData()
     }
 
     fun loadPlayers() {
@@ -45,6 +47,14 @@ class HomeViewModel @Inject constructor(
                     error = e.message ?: "Failed to load players"
                 )
             }
+        }
+    }
+
+    fun loadStaticData() {
+        _uiState.update {
+            it.copy(
+                isLoading = false, error = null, players = StaticPlayerData.players
+            )
         }
     }
 }

@@ -1,7 +1,6 @@
 package com.devansh.crikstats.di
 
 import android.content.Context
-import com.devansh.core.data.repository.CricketRepository
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton

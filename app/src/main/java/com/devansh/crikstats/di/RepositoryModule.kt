@@ -1,8 +1,8 @@
 package com.devansh.crikstats.di
 
-import com.devansh.core.data.api.CricketApiService
-import com.devansh.core.data.repository.CricketRepository
-import com.devansh.core.data.repository.CricketRepositoryImpl
+import com.devansh.crikstats.data.api.CricketApiService
+import com.devansh.crikstats.data.repository.CricketRepository
+import com.devansh.crikstats.data.repository.CricketRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -1,8 +1,8 @@
-package com.devansh.core.data.api
+package com.devansh.crikstats.data.api
 
-import com.devansh.core.data.model.PlayerStatsResponse
-import com.devansh.core.data.model.PlayerSummary
-import com.devansh.core.data.model.PlayersApiResponse
+import com.devansh.crikstats.data.model.PlayerStatsResponse
+import com.devansh.crikstats.data.model.PlayerSummary
+import com.devansh.crikstats.data.model.PlayersApiResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -12,7 +12,6 @@ interface CricketApiService {
     @GET("/v1/players_info")
     suspend fun getPlayerStats(
         @Query("apikey") apiKey: String = API_KEY,
-        @Query("offset") offset: Int = 0,
         @Query("id") playerId: String
     ): Response<PlayersApiResponse<PlayerStatsResponse>>
 

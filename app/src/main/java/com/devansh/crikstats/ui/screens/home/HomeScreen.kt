@@ -20,7 +20,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import com.devansh.core.utils.InstallState
+import com.devansh.crikstats.utils.InstallState
 import com.devansh.crikstats.ui.component.ErrorMessage
 import com.devansh.crikstats.ui.component.PlayerList
 
